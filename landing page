@@ -1,0 +1,307 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Main Landing */
+.main-landing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.main-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.main-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.main-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.cta-btn:hover {
+    background: #0056b3;
+}
+
+.main-image {
+    flex: 1;
+    text-align: center;
+}
+
+.main-image img {
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    object-fit: cover;
+}
+
+/* Features */
+.features {
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.feature-columns {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    padding: 30px 20px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 340px;
+    text-align: center;
+}
+
+.feature-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+/* About */
+.about {
+    padding: 40px 0;
+    background: #e9ecef;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 50px 0 30px 0;
+}
+
+.cta h2 {
+    margin-bottom: 24px;
+    font-size: 1.7rem;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 24px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-landing, .feature-columns, footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .feature-card {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 98%;
+        padding: 0 4px;
+    }
+    .main-text h1 {
+        font-size: 2rem;
+    }
+    .feature-card {
+        padding: 18px 8px;
+    }
+    nav a {
+        margin-left: 10px;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container row align-center">
+            <img src="images/logo.png" alt="Brand Logo" class="logo">
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Landing Main Section -->
+    <section class="main-landing container columns">
+        <div class="main-text">
+            <h1>Amazing Product Name</h1>
+            <p>Discover the features of our product. Enhance your life with modern design and cutting-edge technology.</p>
+            <a href="#buy" class="cta-btn">Buy Now</a>
+        </div>
+        <div class="main-image">
+            <img src="images/product-cropped.png" alt="Product Image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features container">
+        <h2>Key Features</h2>
+        <div class="feature-columns">
+            <div class="feature-card">
+                <img src="images/feature1.png" alt="Feature 1">
+                <h3>Feature One</h3>
+                <p>Short description of the first feature.</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/feature2.png" alt="Feature 2">
+                <h3>Feature Two</h3>
+                <p>Brief explanation of the second feature.</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/feature3.png" alt="Feature 3">
+                <h3>Feature Three</h3>
+                <p>Highlight the third feature here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about container">
+        <h2>About Our Product</h2>
+        <p>
+            Our product is crafted with attention to detail and designed for users who appreciate quality and efficiency. All images are carefully cropped and optimized for fast loading.
+        </p>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="buy" class="cta container">
+        <h2>Ready to experience it?</h2>
+        <a href="#contact" class="cta-btn">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container row space-between">
+            <p>&copy; 2025 Amazing Product. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
